@@ -24,10 +24,13 @@
     document.getElementById("chances").innerHTML = "Tentativas: " + tentativas
     if(tentativas == 0){
         document.getElementById("btn").disabled = true;
+        if(valor == sort){
+            saida.innerHTML = "Acertou";
+        } else{
         saida.innerHTML = "Acabou as tentativas, o valor sorteado era: " + sort
+        }
     }
 
-    
 }
 
     function novo(){
@@ -35,5 +38,5 @@
         tentativas = 5;
         document.getElementById("chances").innerHTML = "Tentativas: " + tentativas
         document.getElementById("btn").disabled = false;
-        saida.innerHTML = ""
+        saida.innerHTML = "";
     }
